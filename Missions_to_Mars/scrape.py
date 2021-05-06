@@ -1,4 +1,5 @@
 #import dependencies
+import bs4
 from bs4 import BeautifulSoup
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
@@ -119,3 +120,7 @@ def scrape():
             "fact_table": str(mars_html_table),
             "hemisphere_images": hemisphere_image_urls
         }
+
+    browser.quit()
+
+    return mars_dict
